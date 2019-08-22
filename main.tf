@@ -135,6 +135,7 @@ resource "aws_lambda_function" "archiver" {
     variables = {
       BUCKET_NAME = "${var.s3_bucket_name}"
       QUEUE_NAME  = "${aws_sqs_queue.archiver.name}"
+      NAMESPACE   = "${var.namespace}"
     }
   }
 
