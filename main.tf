@@ -72,6 +72,7 @@ resource "aws_iam_role_policy" "lambda_archiver" {
   "Statement": [
     {
       "Sid": "s3AndSqsAccess",
+      "Effect": "Allow",
       "Action": [
         "sqs:DeleteMessage",
         "s3:PutObject",
@@ -86,6 +87,7 @@ resource "aws_iam_role_policy" "lambda_archiver" {
     },
     {
       "Sid": "CheckAccess",
+      "Effect": "Allow",
       "Action": [
         "s3:HeadBucket",
         "sqs:ListQueues"
