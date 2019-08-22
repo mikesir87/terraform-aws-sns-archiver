@@ -71,7 +71,7 @@ resource "aws_iam_role_policy" "lambda_archiver" {
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "s3AndSqsAccess"
+      "Sid": "s3AndSqsAccess",
       "Action": [
         "sqs:DeleteMessage",
         "s3:PutObject",
