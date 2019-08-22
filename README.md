@@ -41,7 +41,6 @@ The events are stored in S3 using the key `{namespace}/YEAR/MONTH/DAY/HOUR/MM-SS
 | ---- | ----------- |
 | sqs_queue_name | Name of the SQS queue used to help process events |
 | sqs_queue_arn  | ARN of the SQS queue used to help process events |
-| lambda_function_name | Name of the Lambda function processing events  |
 | lambda_function_arn  | ARN of the Lambda function processing events  |
 
 
