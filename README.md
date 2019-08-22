@@ -4,7 +4,8 @@ This module adds a SQS subscription to a SNS topic and archives all received mes
 
 ```hcl
 module "sns_archiver" {
-  source            = "git::https://github.com/mikesir87/terraform-sns-archiver.git?ref=master"
+  source            = "mikesir87/sns-archiver/aws"
+  version           = "<latest tag>"
   namespace         = "example"
   sns_topic_name    = "my-topic"
   s3_bucket_name    = "bucket_name"
