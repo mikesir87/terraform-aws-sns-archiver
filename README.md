@@ -33,6 +33,9 @@ The events are stored in S3 using the key `{namespace}/YEAR/MONTH/DAY/HOUR/MM-SS
 | sns_topic_name | Name of the SNS topic being archived | string | - | yes |
 | s3_bucket_name | Name of the S3 bucket the items will be archived in | string | - | yes |
 | archive_frequency | Schedule expression for a CloudWatch rule (e.g rate(1 hour), cron(0 12 * * ? *)) | string | rate(1 hour) | no |
+| lambda_timeout | Timeout for the Lambda function performing the archive (in seconds) | string | 60 | no |
+| lambda_memory_size | Memory allocation for the Lambda function performing the archive | string | 128 | no |
+| archive_frequency | Schedule expression for a CloudWatch rule (e.g rate(1 hour), cron(0 12 * * ? *)) | string | rate(1 hour) | no |
 | tags | Additional tags to attach to resources | map | {} | no |
 
 

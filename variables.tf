@@ -19,6 +19,18 @@ variable "archive_frequency" {
   default     = "rate(1 hour)"
 }
 
+variable "lambda_timeout" {
+  description = "Timeout for the Lambda function performing the archive (in seconds)"
+  type        = "string"
+  default     = "60"
+}
+
+variable "lambda_memory_size" {
+  description = "Memory allocation for the Lambda function performing the archive"
+  type        = "string"
+  default     = "128"
+}
+
 variable "tags" {
   description = "Additional tags to attach to resources"
   type        = "map"

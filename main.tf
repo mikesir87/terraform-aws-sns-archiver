@@ -130,6 +130,8 @@ resource "aws_lambda_function" "archiver" {
   handler          = "index.lambdaHandler"
   filename         = "${data.archive_file.function.output_path}"
   source_code_hash = "${filebase64sha256(data.archive_file.function.output_path)}"
+  timeout          = "${var.lambda_timeout}"
+  memory_size      = "${var.lambda_memory_size}"
 
   environment {
     variables = {
