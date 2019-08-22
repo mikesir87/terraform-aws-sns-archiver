@@ -6,7 +6,7 @@ const sqs = new AWS.SQS();
 const s3 = new AWS.S3();
 
 function lambdaHandler() {
-  const { SQS_QUEUE_NAME: QUEUE_NAME, BUCKET_NAME, NAMESPACE } = process.env;
+  const { QUEUE_NAME, BUCKET_NAME, NAMESPACE } = process.env;
 
   if (QUEUE_NAME === undefined) throw new Error("QUEUE_NAME not defined");
   if (BUCKET_NAME === undefined) throw new Error("BUCKET_NAME not defined");
