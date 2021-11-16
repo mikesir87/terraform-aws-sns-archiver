@@ -8,7 +8,7 @@
     "prettify": "prettier --write -l \"**/*.js\""
   },
   "dependencies": {
-    "aws-sdk": "^2.514.0"
+    "aws-sdk": "^2.814.0"
   },
   "devDependencies": {
     "husky": "^3.0.4",
